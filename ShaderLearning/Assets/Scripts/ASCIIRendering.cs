@@ -33,11 +33,17 @@ namespace UnityStandardAssets.ImageEffects
 
             m_ASCII.SetFloat("_tilesX", tilesX);
             m_ASCII.SetFloat("_tilesY", tilesY);
-            m_ASCII.SetFloat("_tilesW", charWidth);
-            m_ASCII.SetFloat("_tilesH", charHeight);
             m_ASCII.SetFloat("_charCount", charCount);
-            m_ASCII.SetFloat("_monochromatic", (float)Convert.ToDouble(monochromatic));
-            m_ASCII.SetFloat("_brightness", brightness);
+
+
+
+            m_ASCII.SetFloat("_monoGray", (float)Convert.ToDouble(monoGray));
+            m_ASCII.SetFloat("_monoRed", (float)Convert.ToDouble(monoRed));
+            m_ASCII.SetFloat("_monoGreen", (float)Convert.ToDouble(monoGreen));
+            m_ASCII.SetFloat("_monoBlue", (float)Convert.ToDouble(monoBlue));
+
+            brightnessMultiplier = Mathf.Clamp(brightnessMultiplier, 0f, 100f);
+            m_ASCII.SetFloat("_brightnessMultiplier", brightnessMultiplier);
             Graphics.Blit(source, destination, m_ASCII);
         }
     }
