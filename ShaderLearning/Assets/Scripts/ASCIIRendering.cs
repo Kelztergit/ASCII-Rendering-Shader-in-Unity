@@ -17,14 +17,31 @@ namespace UnityStandardAssets.ImageEffects
         private Material m_ASCII;
 
         //Values for the Shader
+        [Header("Put in your chartex/charmap")]
         public Texture2D CharTex;
-        public int tilesX = 96;
-        public int tilesY = 54;
-        public int charWidth = 20;
-        public int charHeight = 20;
+        [Header("The final 'resolution' you want to see, ideally same ratio as screen is")]
+        [Tooltip("Horizontal, left-right")]
+        public int tilesX = 120;
+        [Tooltip("Vertical, up-down")]
+        public int tilesY = 60;
+        [Header("How many characters are in the map")]
         public int charCount = 8;
-        public float brightness = .8f;
-        public bool monochromatic = false;
+        
+
+        [Space]
+
+        [Header("Visual Settings")]
+        [Tooltip("A value between 0 and 100 that controls the brightness of the background behind the characters")]
+        public float brightnessMultiplier = 0f;
+
+        [Tooltip("you can not mix these, pick one and have the others set to false, these change the colour of the characters")]
+        public bool monoGray = false;
+        [Tooltip("you can not mix these, pick one and have the others set to false, these change the colour of the characters")]
+        public bool monoRed = false;
+        [Tooltip("you can not mix these, pick one and have the others set to false, these change the colour of the characters")]
+        public bool monoGreen = false;
+        [Tooltip("you can not mix these, pick one and have the others set to false, these change the colour of the characters")]
+        public bool monoBlue = false;
 
         private void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
