@@ -1,30 +1,17 @@
-# ASCII Rendering Shader in Unity
- Unity Image Effect that replicates retro ASCII rendering seen in games such as Rogue and Dwarf Fortress!
+# A modified Ascii rendering shader in unity
+original credit goes to [StefanJo3107/ASCII-Rendering-Shader-in-Unity: Unity Image Effect that replicates retro ASCII rendering seen in games such as Rogue and Dwarf Fortress (github.com)](https://github.com/StefanJo3107/ASCII-Rendering-Shader-in-Unity)
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X223BQX)
+what i did was mainly : 
+- Change monochromatic from being green only to instead monogreen and added monored, monoblue and mono gray as options. 
+-  Change parts there were bound to expect 1920x1080 to instead use screen size as it is
+- Change it so you don't need to specify character size manually, it now sets it based on your current screensize and your tilesizes you picked, thus simplifying it down to 3 fields you need to modify, i.e. Tiles X, Tiles Y and Char Count
 
-Simply start by adding ASCIIRendering script to your camera Game Object.
+The goal being to simplify the process of setting up the characters and tiles in such a way that it felt more intuitive to me, whether these can be considered an improvement or not is up to you.
 
-Variables Description:
-* ASCII Shader: Reference to the shader itself
-* CharTex: Characters Texture, it is a texture that consists of a character sprites in a single line. See example in the Textures folder
-* Tiles X: Number of characters horizontally, it is recommended to set this value to ScreenWidth/charWidth for the best result
-* Tiles Y: Number of characters vertically, it is recommended to set this value to ScreenHeight/charHeight for the best result
-* charWidth: Width of a single character in pixels
-* charHeight: Height of a single character in pixels
-* charCount: Number of characters in a texture
-* brightness: Background brigthness of a character, it should be a value between [0,1]
-* monochromatic: Should the shader use all of the colors, or only shades of green
-
-You are free to use this shader on all of your projects, commercial or non-commercial, you don't have to credit me anywhere, even though that would be nice.
-
-Contact:
-* Twitter: https://twitter.com/SJovGD
-* Reddit: https://www.reddit.com/user/sjovanovic3107
-* Unity Asset Store: https://assetstore.unity.com/publishers/32235
-* Itch.io page: https://stefanjo.itch.io/
-
+images via original repo + some of mine 
 ![Example 01](https://i.imgur.com/c0I6ilo.png)
 ![Example 02](https://i.imgur.com/iGROj0O.png)
 ![Example 03](https://i.imgur.com/23NWYVU.png)
+![Example 04](https://imgur.com/ZMZheJL.png)
+![Example 05](https://imgur.com/q0SwQSt.png)
 
